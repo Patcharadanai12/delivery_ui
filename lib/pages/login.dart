@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'all.dart';
+import 'home_pagerider.dart';
 
 
 // ส่วนที่เกี่ยวกับ Firebase ถูกลบออกไป:
@@ -54,7 +55,7 @@ class _LoginPageState extends State<LoginPage> {
       if (loginInput == 'rider' && _passwordController.text.trim() == '123') {
            Navigator.pushReplacement(
              context,
-             MaterialPageRoute(builder: (context) => const DeliveryScreen()),
+             MaterialPageRoute(builder: (context) => const DeliveryJobScreen()),
            );
       } else if (loginInput == 'customer' && _passwordController.text.trim() == '123') {
            Navigator.pushReplacement(
