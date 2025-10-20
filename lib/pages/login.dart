@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'all.dart';
-import 'home_pagerider.dart';
+import 'package:delivery_ui/rider/rider_home.dart';
+
 
 
 // ส่วนที่เกี่ยวกับ Firebase ถูกลบออกไป:
@@ -9,13 +10,7 @@ import 'home_pagerider.dart';
 // import 'package:cloud_firestore/cloud_firestore.dart';
 
 // --- สร้างหน้าจำลองขึ้นมาเพื่อทดสอบการทำงาน ---
-class UserHomeScreen extends StatelessWidget {
-  const UserHomeScreen({super.key});
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: const Text("User's Home Page")));
-  }
-}
+
 // ---------------------------------------------
 
 class LoginPage extends StatefulWidget {
@@ -55,7 +50,7 @@ class _LoginPageState extends State<LoginPage> {
       if (loginInput == 'rider' && _passwordController.text.trim() == '123') {
            Navigator.pushReplacement(
              context,
-             MaterialPageRoute(builder: (context) => const DeliveryJobScreen()),
+             MaterialPageRoute(builder: (context) => const DeliveryHomePage()),
            );
       } else if (loginInput == 'customer' && _passwordController.text.trim() == '123') {
            Navigator.pushReplacement(
